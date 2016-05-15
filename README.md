@@ -44,12 +44,19 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get remove nodejs-legacy
 sudo apt-get autoremove
+sudio apt-get install -y nginx
 wget http://node-arm.herokuapp.com/node_latest_armhf.deb
 sudo dpkg -i node_latest_armhf.deb
 ```
 We have our core packages, now we need to tell npm to get the dependencies
 ```
 npm install
+```
+Finally, we need to copy our nginx config into place
+```
+cd /etc/nginx/sites-enabled
+sudo rm default
+sudo ln -s ~/Git/hacknight-pir/HackNight-PIR.nginx HackNight-PIR
 ```
 
 ## Usage
