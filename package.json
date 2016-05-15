@@ -1,0 +1,15 @@
+{
+	"name": "node-pir",
+	"description": "A PIR-sensor based node app for RaspberryPi",
+	"author": "Kyle Kurz <github@kylekurz.com>",
+	"dependencies": {
+		"rpi-gpio": "0.7.x",
+		"express": "2.3.x"
+	},
+	"engine": "node >= 4.1",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kylekurz/hacknight-pir.git"
+	}
+}
