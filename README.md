@@ -53,8 +53,12 @@ npm install
 ```
 
 ## Usage
-Once you have your sensor wired up (code expects pin 7 for input), simply run:
+Once you have your sensor wired up (code defaults to pin 7 for input if not specified), simply run:
 ```
 sudo node HackNight-PIR.js
+```
+or
+```
+sudo node HackNight-PIR.js --pin=17
 ```
 

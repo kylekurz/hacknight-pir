@@ -4,7 +4,8 @@
 	"author": "Kyle Kurz <github@kylekurz.com>",
 	"dependencies": {
 		"rpi-gpio": "0.7.x",
-		"express": "2.3.x"
+		"express": "2.3.x",
+		"minimist": "1.2.x"
 	},
 	"engine": "node >= 4.1",
 	"license": "MIT",
