@@ -9,15 +9,32 @@ the table before heading downstairs.
 
 ## Setup
 The latest Raspbian image has some issues right up front, so let's get you online
-and in a good state
+and in a good state:
 ```
 sudo vi /etc/default/keyboard
-	XKBLAYOUT=”us”
+```
+We need to set the keyboard to US (default is GB)
+```
+XKBLAYOUT=”us”
+```
+Some additional steps are needed to ensure access and set up the rest of the Pi,
+we'll talk through the options as we go.
+```
 sudo raspi-config
-	We’ll talk through options here
+```
+We need to add the network to the wifi configuration
+```
 sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+```
+Copy this into there:
+```
+network={
 	ssid=”Hack Night”
 	psk=”sw1tchv0x”
+}
+```
+Reboot your device and it should hop online so you can SSH to it.
+```
 sudo reboot
 ```
 
