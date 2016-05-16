@@ -7,7 +7,14 @@ table is free.
 Uses express to serve a web page that users can view to see the availability of
 the table before heading downstairs.
 
-## Setup
+## Easy Setup
+Run the setup script (need internet for this) and reboot
+```
+./setup.sh
+reboot & exit
+```
+
+## Manual Setup
 The latest Raspbian image has some issues right up front, so let's get you online
 and in a good state:
 ```
@@ -56,7 +63,7 @@ Finally, we need to copy our nginx config into place
 ```
 cd /etc/nginx/sites-enabled
 sudo rm default
-sudo ln -s ~/Git/hacknight-pir/HackNight-PIR.nginx HackNight-PIR
+sudo ln -s ~/Git/hacknight-pir/HackNight-PIR.nginx HackNight-PIR.nginx
 ```
 
 ## Usage
