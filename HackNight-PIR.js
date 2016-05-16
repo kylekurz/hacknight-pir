@@ -4,7 +4,7 @@ const argv = require('minimist')(process.argv.slice(2));
 const port = 45331;
 
 //get the pin from the command line or default to 7
-const pin = argv["pin"]?argv["pin"]:7;
+const pin = argv["pin"] || 7;
 
 //callback when the state changes
 gpio.on('change', function(channel, value) {
