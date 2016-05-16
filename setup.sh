@@ -1,5 +1,7 @@
 #!/bin/bash
 
+doInstall ()
+{
 #install all the dependencies
 sudo apt-get update
 sudo apt-get -y upgrade
@@ -28,3 +30,17 @@ echo $PWD
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo ln -s $PWD/HackNight-PIR.nginx /etc/nginx/sites-enabled/HackNight-PIR.nginx
 sudo /etc/init.d/nginx restart
+}
+
+#warn that we use sudo and change the system
+while true; do
+	read -p "This script will use several sudo commands to update
+your system and set it up for running the HackNight-PIR
+code. Do you wish to continue? " yn
+	case $yn in
+		[Yy]* ) doInstall; break;;
+		[Nn]* ) break;;
+		* ) echo "Please answer yes or no. ";;
+	esac
+done
+
