@@ -1,0 +1,14 @@
+body {
+    background-color: #6A6A6A;
+}
+
+.tableImage {
+    margin: auto;
+    width: 1024px;
+}
+
+.statusText {
+    margin: auto;
+    width: 1024px;
+    text-align: center;
+}
