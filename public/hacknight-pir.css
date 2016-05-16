@@ -4,11 +4,11 @@ body {
 
 .tableImage {
     margin: auto;
-    width: 1024px;
+    width: 80%;
 }
 
 .statusText {
     margin: auto;
-    width: 1024px;
+    width: 80%;
     text-align: center;
 }
