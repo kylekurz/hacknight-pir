@@ -8,7 +8,7 @@ Uses express to serve a web page that users can view to see the availability of
 the table before heading downstairs.
 
 ## Initial configuration
-Run:
+Hit alt+F1 to drop down to a shell, then run:
 ```
 sudo raspi-config
 ```

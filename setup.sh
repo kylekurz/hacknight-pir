@@ -3,10 +3,10 @@
 doInstall ()
 {
 #install all the dependencies
-sudo apt-get update
-sudo apt-get -y upgrade
 sudo apt-get -y remove nodejs-legacy
 sudo apt-get -y autoremove
+sudo apt-get update
+sudo apt-get -y upgrade
 sudo apt-get install -y nginx vim
 wget http://node-arm.herokuapp.com/node_latest_armhf.deb
 sudo dpkg -i node_latest_armhf.deb
