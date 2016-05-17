@@ -7,6 +7,19 @@ table is free.
 Uses express to serve a web page that users can view to see the availability of
 the table before heading downstairs.
 
+## Initial configuration
+Run:
+```
+sudo raspi-config
+```
+Select the following options:
+```
+Expand Filesystem
+Boot Options -> B1 Console
+Advanced Options -> SSH -> Enable
+```
+Exit and select 'Yes' to reboot now
+
 ## Easy Setup
 Run the setup script (need internet for this) and reboot
 ```
