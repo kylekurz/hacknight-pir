@@ -23,12 +23,10 @@ sudo echo 'network={
 
 #install the node modules
 npm install
-PWD=`pwd`
-echo $PWD
 
 #do the nginx linking
 sudo rm -f /etc/nginx/sites-enabled/default
-sudo ln -s $PWD/HackNight-PIR.nginx /etc/nginx/sites-enabled/HackNight-PIR.nginx
+sudo ln -s `pwd`/HackNight-PIR.nginx /etc/nginx/sites-enabled/HackNight-PIR.nginx
 sudo /etc/init.d/nginx restart
 }
 
