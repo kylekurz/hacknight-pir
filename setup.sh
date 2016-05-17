@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get remove nodejs-legacy
 sudo apt-get autoremove
-sudio apt-get install -y nginx
+sudo apt-get install -y nginx vim
 wget http://node-arm.herokuapp.com/node_latest_armhf.deb
 sudo dpkg -i node_latest_armhf.deb
 rm -f node_latest_armhf.deb
