@@ -5,15 +5,15 @@ doInstall ()
 #install all the dependencies
 sudo apt-get update
 sudo apt-get -y upgrade
-sudo apt-get remove nodejs-legacy
-sudo apt-get autoremove
+sudo apt-get -y remove nodejs-legacy
+sudo apt-get -y autoremove
 sudo apt-get install -y nginx vim
 wget http://node-arm.herokuapp.com/node_latest_armhf.deb
 sudo dpkg -i node_latest_armhf.deb
 rm -f node_latest_armhf.deb
 
 #hack the keyboard to US
-sudo sed -i 's/XKBLAYOUT="gb"/XKBLAYOUT="us"/'
+sudo sed -i 's/XKBLAYOUT="gb"/XKBLAYOUT="us"/' /etc/default/keyboard
 
 #update the wpa_supplicant.conf
 sudo echo 'network={
