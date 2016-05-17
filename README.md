@@ -24,7 +24,7 @@ Exit and select 'Yes' to reboot now
 Run the setup script (need internet for this) and reboot
 ```
 ./setup.sh
-reboot & exit
+sudo reboot & exit
 ```
 
 ## Manual Setup
