@@ -6,7 +6,8 @@
 		"rpi-gpio": "0.7.x",
 		"express": "2.3.x",
 		"minimist": "1.2.x",
-        "socket.io": "1.4.x"
+		"log-timestamp": "0.1.x",
+		"socket.io": "1.4.x"
 	},
 	"engine": "node >= 4.1",
 	"license": "MIT",
