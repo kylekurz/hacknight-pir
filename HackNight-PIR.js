@@ -6,6 +6,7 @@ const port = 45331;
 
 //get the pin from the command line or default to 7
 const pin = argv["pin"] || 7;
+const writePin = argv["writePin"] || 11;
 
 //save the state for when clients connect
 var state = false;
@@ -16,11 +17,21 @@ gpio.on('change', function(channel, value) {
     state = value;
     if (value === true) {
         io.sockets.emit('message', { message: 'The table is in use!!!' });
+	gpio.write(writePin, true, function(err) {
+		if (err) throw err;
+		console.log('Written to pin');
+	});
     } else {
         io.sockets.emit('message', { message: 'The table is free!!!' });
+	gpio.write(writePin, false, function(err) {
+		if (err) throw err;
+		console.log('Written to pin');
+	});
     }
 });
 
+//set up the gpio for writing
+gpio.setup(writePin, gpio.DIR_OUT);
 //set up the gpio for interrupts on both rising and falling edge
 gpio.setup(pin, gpio.DIR_IN, gpio.EDGE_BOTH);
 
